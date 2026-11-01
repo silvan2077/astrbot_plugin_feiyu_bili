@@ -1,0 +1,16 @@
+{
+  "enabled": {"type":"bool","description":"默认开启自动分享（仍需本人私聊绑定）","default":false},
+  "preview_on_start": {"type":"bool","description":"启动后运行一次不发送的诊断预览（产生模型费用）","default":false},
+  "source_mode": {"type":"string","description":"选片来源：local自行搜索，dsh使用同步的DSH笔记","default":"local","options":["local","dsh"]},
+  "owner_qq": {"type":"string","description":"只接收分享的本人QQ号","default":""},
+  "provider_id": {"type":"string","description":"筛选和推荐模型，留空跟随私聊","default":"","_special":"select_provider"},
+  "keywords": {"type":"list","description":"视频兴趣关键词","default":["美食","趣闻","轻度游戏"],"items":{"type":"string"}},
+  "proxy": {"type":"string","description":"B站和ASR代理，留空直连","default":""},
+  "bilibili_cookie": {"type":"string","description":"可选B站Cookie，仅用于只读接口","default":"","_secret":true},
+  "asr_enabled": {"type":"bool","description":"无字幕且不超过10分钟时尝试音频转写","default":true},
+  "asr_source_id": {"type":"string","description":"复用AstrBot硅基流动来源ID，不是模型ID","default":"siliconflow"},
+  "check_interval_minutes": {"type":"int","description":"检查周期，最少15分钟","default":60},
+  "followup_enabled": {"type":"bool","description":"本人继续讨论已推送视频时，先调用已启用的BiliRead补充内容","default":true},
+  "followup_lookback_hours": {"type":"int","description":"语义关联最近分享的小时数（1—168）；明确BV引用可匹配保留的最近12条","default":24},
+  "followup_timeout_seconds": {"type":"int","description":"BiliRead读取超时秒数（10—120）；成功缓存24小时，失败冷却5分钟","default":60}
+}

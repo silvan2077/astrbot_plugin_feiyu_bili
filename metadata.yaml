@@ -1,0 +1,8 @@
+name: astrbot_plugin_feiyu_bili
+display_name: 大肥鱼 B站浏览分享
+desc: B站视频搜索与DSH笔记分享、人格化看法、BiliRead视频追问理解，仅限本人QQ私聊。
+version: 0.2.0
+author: Silvan
+astrbot_version: '>=4.29.0'
+support_platforms:
+  - aiocqhttp
